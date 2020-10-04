@@ -148,6 +148,20 @@ table {
   border-radius: 12px;
 }
 
+.errorbtn {
+  margin: 30px 15px;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: darksalmon;
+  color: black;
+
+  letter-spacing: 1px;
+  outline: 0;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
 .header {
   background-color: cadetblue;
   padding: 50px 0px;
