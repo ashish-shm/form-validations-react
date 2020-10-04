@@ -15,6 +15,7 @@ export class EducationDetails extends Component {
 
   render() {
     const { values, handleInput } = this.props;
+    const validateResult = validate(values);
     return (
       <>
         <div className="inputfield">
@@ -22,19 +23,25 @@ export class EducationDetails extends Component {
             <TextField
               onChange={handleInput("school")}
               style={styles.input}
+              error={values.school.length > 3 ? undefined : "lol"}
               label="School"
               defaultValue={values.school}
-              helperText="Incorrect entry."
+              helperText={
+                values.school.length > 3 ? undefined : "Enter School Name"
+              }
               variant="outlined"
             />
           </div>
           <div>
             <TextField
               onChange={handleInput("college")}
+              error={values.school.length > 3 ? undefined : "E"}
               style={styles.input}
               label="College"
               defaultValue={values.college}
-              helperText="Incorrect entry."
+              helperText={
+                values.school.length > 3 ? undefined : "Enter College Name"
+              }
               variant="outlined"
             />
           </div>
@@ -44,7 +51,7 @@ export class EducationDetails extends Component {
               style={styles.input}
               label="Post Graduation"
               defaultValue={values.postgrad}
-              helperText="Incorrect entry."
+              helperText="Enter Post Graduation details if you have"
               variant="outlined"
             />
           </div>
@@ -57,9 +64,15 @@ export class EducationDetails extends Component {
             </div>
 
             <div>
-              <button className="nextbtn" onClick={this.continue}>
-                Next
-              </button>
+              {validateResult ? (
+                <button className="nextbtn" onClick={this.continue}>
+                  Next
+                </button>
+              ) : (
+                <button className="errorbtn">
+                  Fill out the correct details first
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -72,6 +85,14 @@ const styles = {
   input: {
     marginTop: 40,
   },
+};
+
+const validate = (values) => {
+  let first = values.school.length > 3;
+  let second = values.college.length > 3;
+
+  if (first && second) return true;
+  else return false;
 };
 
 export default EducationDetails;

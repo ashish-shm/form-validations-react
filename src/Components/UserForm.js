@@ -18,6 +18,9 @@ export class UserForm extends Component {
     lname: "",
     address: "",
     city: "",
+    school: "",
+    college: "",
+    postgrad: "",
   };
 
   nextStep = () => {

@@ -71,9 +71,10 @@ export class UserDetails extends Component {
               label="Contact Number"
               defaultValue={values.phone}
               helperText={
-                values.phone.length === 10
+                values.phone.length === 10 &&
+                Number(values.phone.split("").shift()) === 9
                   ? undefined
-                  : "Enter a valid mobile number"
+                  : "Enter a valid mobile number (9**)"
               }
               variant="outlined"
             />
@@ -84,7 +85,9 @@ export class UserDetails extends Component {
                 Next
               </button>
             ) : (
-              <button className="errorbtn">Fill out the details first</button>
+              <button className="errorbtn">
+                Fill out the correct details first
+              </button>
             )}
           </div>
         </div>
@@ -104,7 +107,8 @@ const validate = (values) => {
   let first = values.username.length > 6;
   let second = values.bio.length > 6;
   let third = re.test(values.email) ? true : false;
-  let fourth = values.phone.length === 10;
+  let fourth =
+    values.phone.length === 10 && Number(values.phone.split("").shift()) === 9;
   if (first && second && third && fourth) return true;
   else return false;
 };

@@ -120,7 +120,9 @@ export class PersonalDetails extends Component {
                   Next
                 </button>
               ) : (
-                <button className="errorbtn">Fill out the details first</button>
+                <button className="errorbtn">
+                  Fill out the correct details first
+                </button>
               )}
             </div>
           </div>
