@@ -75,9 +75,16 @@ export class UserForm extends Component {
         return (
           <>
             <Header title="Confirm Details" />
-            <ConfirmDetails values={values} />
+            <ConfirmDetails
+              values={values}
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+            />
           </>
         );
+
+      case 5:
+        return <Header title="Success" />;
     }
   }
 }

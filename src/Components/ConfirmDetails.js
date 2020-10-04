@@ -100,6 +100,31 @@ export class ConfirmDetails extends Component {
             />
           </div>
 
+          <div>
+            <TextField
+              style={styles.input}
+              label="School"
+              defaultValue={values.school}
+              variant="outlined"
+            />
+          </div>
+          <div>
+            <TextField
+              style={styles.input}
+              label="College"
+              defaultValue={values.college}
+              variant="outlined"
+            />
+          </div>
+          <div>
+            <TextField
+              style={styles.input}
+              label="Post Graduation"
+              defaultValue={values.postgrad}
+              variant="outlined"
+            />
+          </div>
+
           <div className="flex">
             <div>
               <button className="nextbtn" onClick={this.goBack}>
@@ -121,7 +146,7 @@ export class ConfirmDetails extends Component {
 
 const styles = {
   input: {
-    marginTop: 40,
+    marginTop: 20,
   },
 };
 
