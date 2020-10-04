@@ -13,6 +13,11 @@ export class UserForm extends Component {
     email: "",
     phone: "",
     country: "India",
+    pin: "",
+    fname: "",
+    lname: "",
+    address: "",
+    city: "",
   };
 
   nextStep = () => {

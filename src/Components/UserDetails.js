@@ -79,7 +79,6 @@ export class UserDetails extends Component {
             />
           </div>
           <div>
-            {" "}
             {validateResult ? (
               <button className="nextbtn" onClick={this.continue}>
                 Next
