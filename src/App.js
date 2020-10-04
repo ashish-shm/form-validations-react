@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import UserForm from './Components/UserForm';
 
 
 class App extends Component {
   render() {
     return (
-      <h1>Hello</h1>
+      <UserForm />
     )
   }
 }
