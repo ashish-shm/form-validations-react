@@ -25,7 +25,7 @@ export class UserDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("username")}
-              error={values.username.length < 6 ? "gsag" : undefined}
+              // error={values.username.length < 6 ? "gsag" : undefined}
               style={styles.input}
               label="Username"
               defaultValue={values.username}
@@ -40,7 +40,7 @@ export class UserDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("bio")}
-              error={values.bio.length < 6 ? "gsag" : undefined}
+              // error={values.bio.length < 6 ? "gsag" : undefined}
               style={styles.input}
               label="Bio"
               defaultValue={values.bio}
@@ -53,7 +53,7 @@ export class UserDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("email")}
-              error={re.test(values.email) ? undefined : "lol"}
+              // error={re.test(values.email) ? undefined : "lol"}
               style={styles.input}
               label="E-mail"
               defaultValue={values.email}
@@ -66,7 +66,7 @@ export class UserDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("phone")}
-              error={values.phone.length === 10 ? undefined : "lol"}
+              // error={values.phone.length === 10 ? undefined : "lol"}
               style={styles.input}
               label="Contact Number"
               defaultValue={values.phone}

@@ -23,7 +23,7 @@ export class EducationDetails extends Component {
             <TextField
               onChange={handleInput("school")}
               style={styles.input}
-              error={values.school.length > 3 ? undefined : "lol"}
+              // error={values.school.length > 3 ? undefined : "lol"}
               label="School"
               defaultValue={values.school}
               helperText={
@@ -35,7 +35,7 @@ export class EducationDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("college")}
-              error={values.school.length > 3 ? undefined : "E"}
+              // error={values.school.length > 3 ? undefined : "E"}
               style={styles.input}
               label="College"
               defaultValue={values.college}

@@ -25,11 +25,11 @@ export class PersonalDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("fname")}
-              error={
-                values.fname.length > 3 && regName.test(values.fname)
-                  ? undefined
-                  : "lol"
-              }
+              // error={
+              //   values.fname.length > 3 && regName.test(values.fname)
+              //     ? undefined
+              //     : "lol"
+              // }
               style={styles.input}
               label="First Name"
               defaultValue={values.fname}
@@ -44,11 +44,11 @@ export class PersonalDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("lname")}
-              error={
-                values.lname.length > 3 && regName.test(values.lname)
-                  ? undefined
-                  : "lol"
-              }
+              // error={
+              //   values.lname.length > 3 && regName.test(values.lname)
+              //     ? undefined
+              //     : "lol"
+              // }
               style={styles.input}
               label="Last Name"
               defaultValue={values.lname}
@@ -64,7 +64,7 @@ export class PersonalDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("address")}
-              error={values.address.length > 5 ? undefined : "lol"}
+              // error={values.address.length > 5 ? undefined : "lol"}
               style={styles.input}
               label="Address"
               defaultValue={values.address}
@@ -77,7 +77,7 @@ export class PersonalDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("city")}
-              error={values.city.length > 3 ? undefined : "lol"}
+              // error={values.city.length > 3 ? undefined : "lol"}
               style={styles.input}
               label="City"
               defaultValue={values.city}
@@ -88,7 +88,7 @@ export class PersonalDetails extends Component {
           <div>
             <TextField
               onChange={handleInput("pin")}
-              error={values.pin.length === 6 ? undefined : "lol"}
+              // error={values.pin.length === 6 ? undefined : "lol"}
               style={styles.input}
               label="Pincode"
               defaultValue={values.pin}
